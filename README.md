@@ -1,7 +1,7 @@
 # DCNN-SV
 The DCNN-SV mainly focuses on session-independent speaker embedding learning using a dynamic convolution (DCNN) framework.
 
-We provide two types of DCNN implementations for speaker verification by using the TensorFlow and PyTorch deep learning toolkits:
+We provide both Tensorlfow and Pytorch implementation of DCNN framework for speaker verification:
 
 * The TensorFlow implementation is currently being organized. Relevant files will be stored in the "dcnn_tf" directory and the whole project is coming soon.
 
