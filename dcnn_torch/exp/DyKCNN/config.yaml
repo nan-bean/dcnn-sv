@@ -1,0 +1,81 @@
+data_type: shard
+dataloader_args:
+  batch_size: 64
+  drop_last: true
+  num_workers: 8
+  pin_memory: false
+  prefetch_factor: 8
+dataset_args:
+  aug_prob: 0.6
+  fbank_args:
+    dither: 1.0
+    frame_length: 25
+    frame_shift: 10
+    num_mel_bins: 80
+  num_frms: 300
+  resample_rate: 16000
+  shuffle: true
+  shuffle_args:
+    shuffle_size: 2500
+  spec_aug: false
+  spec_aug_args:
+    max_f: 8
+    max_t: 10
+    num_f_mask: 1
+    num_t_mask: 1
+    prob: 0.6
+  speed_perturb: true
+enable_amp: false
+exp_dir: exp/ResNet34-TSTP-emb256-fbank80-num_frms200-aug0.6-spTrue-saFalse-ArcMargin-SGD-epoch150-tfGDCNN-v5-tfresnet-segdecay_L21e-5-accum2
+gpus:
+- 0
+- 1
+log_batch_interval: 100
+loss: CrossEntropyLoss
+loss_args: {}
+margin_scheduler: MarginScheduler
+margin_update:
+  epoch_iter: 8531
+  final_margin: 0.2
+  fix_start_epoch: 30
+  increase_start_epoch: 15
+  increase_type: exp
+  initial_margin: 0.0
+  update_margin: true
+model: ResNet34_gdcnn
+model_args:
+  embed_dim: 256
+  feat_dim: 80
+  pooling_func: TSTP
+  two_emb_layer: false
+model_init: null
+noise_data: data/musan/lmdb
+num_avg: 5
+num_epochs: 100
+optimizer: SGD
+optimizer_args:
+  lr: 0.1
+  momentum: 0.9
+  nesterov: true
+  weight_decay: 0.0001
+projection_args:
+  do_lm: false
+  easy_margin: false
+  embed_dim: 256
+  num_class: 17982
+  project_type: arc_margin
+  scale: 32.0
+reverb_data: data/rirs/lmdb
+save_epoch_interval: 5
+scheduler: ExponentialDecrease
+scheduler_args:
+  epoch_iter: 8531
+  final_lr: 5.0e-05
+  initial_lr: 0.1
+  num_epochs: 100
+  scale_ratio: 2.0
+  warm_from_zero: true
+  warm_up_epoch: 4
+seed: 42
+train_data: data/vox2_dev/shard.list
+train_label: data/vox2_dev/utt2spk
