@@ -3,7 +3,7 @@ The DCNN-SV mainly focuses on session-independent speaker embedding learning usi
 
 We provide both Tensorflow and Pytorch implementation of DCNN framework for speaker verification:
 
-* We are currently organizing the TensorFlow implementation. Relevant files will be stored in the "dcnn_tf" directory and the whole project is coming soon.
+* We are currently organizing the TensorFlow implementation of DCNN framework. Relevant files will be stored in the "dcnn_tf" directory and the whole project is coming soon.
 
 * We provide the trained model for reproducing the best VoxCeleb1-O results mentioned in the article, which is developed by the Pytorch toolkit. More details can be found in the "dcnn_torch" directory.
 
