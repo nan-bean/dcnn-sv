@@ -1,7 +1,7 @@
 # Torch DCNN
 * The implementation is based on [Wespeaker](https://github.com/wenet-e2e/wespeaker"Wespeaker") repository. Trained model is accessible in the exp/DyKCNN directory.
 
-## Model config
+## Model Config
 * Feature: 80-dim fbank, online data augmentation (additive noise, reverberation, speed perturb), score normalization (as-norm)
 * Metrics: cosine similarity, EER(%), MinDCF(P_tar=0.01)
 
