@@ -1,5 +1,5 @@
 # Torch DCNN
-* The implementation is based on [Wespeaker](https://github.com/wenet-e2e/wespeaker"Wespeaker") repository. Trained model is accessible in the exp/DyKCNN directory.
+* The implementation is based on [Wespeaker](https://github.com/wenet-e2e/wespeaker) repository. Trained model is accessible in the exp/DyKCNN directory.
 
 ## Model Config
 * Feature: 80-dim fbank, online data augmentation (additive noise, reverberation, speed perturb), score normalization (as-norm)
